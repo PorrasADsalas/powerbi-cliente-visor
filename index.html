@@ -17,7 +17,7 @@
 function actualizarInforme(cli) {
   const iframe = document.getElementById("powerBiEmbed");
   const baseUrl = "https://app.powerbi.com/reportEmbed?reportId=61a4bd1d-7ad8-44b7-8eac-bd63ac410b97&autoAuth=true&ctid=33e074aa-1197-44f3-bfc7-5634ab1dcaad";
-  const filtro = encodeURIComponent(`cliente/cli eq '${cli}'`);
+  const filtro = encodeURIComponent(`cliente/cli eq ${cli}`);
   const finalUrl = `${baseUrl}&filter=${filtro}`;
 
   console.log("URL generada:", finalUrl);
